@@ -1,0 +1,170 @@
+@import url('theme.css');
+
+body {
+    font-family: 'Sora', sans-serif;
+    background: var(--bg);
+    color: var(--text-dark);
+}
+
+.auth-wrapper {
+    min-height: 100vh;
+}
+
+.auth-card {
+    max-width: 1000px;
+    background: var(--white);
+    border-radius: var(--r-xl);
+    overflow: hidden;
+    border: 1px solid var(--border);
+    box-shadow: 0 30px 70px rgba(0, 0, 0, 0.08);
+}
+
+/* Sidebar */
+.brand-sidebar {
+    background: linear-gradient(135deg, #2A1E8F, var(--indigo));
+    position: relative;
+}
+
+.sidebar-dots {
+    position: absolute;
+    inset: 0;
+    opacity: 0.05;
+    background-image: radial-gradient(circle, #fff 1px, transparent 1px);
+    background-size: 28px 28px;
+}
+
+.logo-title {
+    font-weight: 700;
+    color: #fff;
+}
+
+.logo-title span {
+    color: var(--coral-light);
+}
+
+.brand-heading {
+    color: #fff;
+    font-weight: 700;
+}
+
+.brand-text {
+    color: rgba(255, 255, 255, 0.75);
+}
+
+/* Form */
+.form-container {
+    padding: 3rem 4rem;
+}
+
+.view-title {
+    font-weight: 700;
+}
+
+.view-subtitle {
+    color: var(--text-light);
+}
+
+/* Inputs */
+.input-group-text {
+    background: var(--indigo-pale);
+    border: 1px solid var(--border);
+}
+
+.form-control {
+    border: 1px solid var(--border);
+}
+
+.form-control:focus {
+    border-color: var(--indigo-light);
+    box-shadow: 0 0 0 4px var(--indigo-pale);
+}
+
+/* Buttons */
+.btn-submit {
+    background: var(--coral);
+    color: #fff;
+    font-weight: 600;
+    border-radius: var(--r-sm);
+}
+
+.btn-submit:hover {
+    background: var(--coral-light);
+}
+
+.btn-oauth {
+    background: #fff;
+    border: 1px solid var(--border);
+    font-weight: 600;
+}
+
+.btn-oauth:hover {
+    background: var(--indigo-pale);
+}
+
+/* Divider */
+.section-divider {
+    display: flex;
+    align-items: center;
+    margin: 1.5rem 0;
+    font-size: 0.75rem;
+    color: var(--text-light);
+    font-weight: 700;
+}
+
+.section-divider::before,
+.section-divider::after {
+    content: "";
+    flex: 1;
+    border-bottom: 1px solid var(--border);
+}
+
+.section-divider::before {
+    margin-right: 1rem;
+}
+
+.section-divider::after {
+    margin-left: 1rem;
+}
+
+a {
+    color: var(--indigo);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+    .form-container {
+        padding: 2rem 1.5rem;
+    }
+}
+
+/* Add this to your existing CSS file */
+
+.otp-box {
+    width: 50px;
+    height: 55px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    border-radius: var(--r-sm, 8px);
+    background: var(--indigo-pale, #f4f5ff);
+    color: var(--text-dark, #232323);
+}
+
+.otp-box:focus {
+    border-color: var(--indigo-light);
+    background: #fff;
+    box-shadow: 0 0 0 4px var(--indigo-pale);
+}
+
+/* Ensure mobile screens scale the input elements nicely */
+@media (max-width: 450px) {
+    .otp-box {
+        width: 40px;
+        height: 48px;
+        font-size: 1.25rem;
+    }
+}

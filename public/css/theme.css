@@ -1,0 +1,95 @@
+:root {
+        /* Primary Colors */
+        --indigo: #4F46E5;
+        --indigo-dark: #4338CA;
+        --indigo-mid: #5243C2;
+        --indigo-light: #6366F1;
+        --indigo-soft: #7B6FD8;
+        --indigo-pale: #EEF2FF;
+        --indigo-xpale: #F8FAFF;
+
+        /* Accent Colors */
+        --coral: #FF6B4A;
+        --coral-dark: #EF4444;
+        --coral-light: #FF8F74;
+        --coral-pale: #FFF1ED;
+
+        --mint: #10B981;
+        --mint-light: #34D399;
+        --mint-pale: #ECFDF5;
+
+        --amber: #F59E0B;
+        --amber-light: #FBBF24;
+        --amber-pale: #FFFBEB;
+
+        /* Surfaces */
+        --white: #FFFFFF;
+        --bg: #F8FAFC;
+        --surface: #FFFFFF;
+        --surface-light: #F1F5F9;
+        --surface-hover: #F8FAFC;
+
+        /* Text */
+        --text-dark: #0F172A;
+        --text-mid: #334155;
+        --text-light: #64748B;
+        --text-muted: #94A3B8;
+
+        /* Borders */
+        --border: #E2E8F0;
+        --border-light: #F1F5F9;
+
+        /* Gradients */
+        --gradient-primary: linear-gradient(135deg, #4F46E5 0%, #7C3AED 100%);
+        --gradient-primary-hover: linear-gradient(135deg, #4338CA 0%, #6D28D9 100%);
+        --gradient-success: linear-gradient(135deg, #10B981 0%, #06B6D4 100%);
+        --gradient-warning: linear-gradient(135deg, #F59E0B 0%, #F97316 100%);
+
+        /* Shadows */
+        --shadow-xs: 0 1px 2px rgba(15, 23, 42, 0.04);
+        --shadow-sm: 0 2px 4px rgba(15, 23, 42, 0.05);
+        --shadow-md: 0 6px 12px rgba(15, 23, 42, 0.08);
+        --shadow-lg: 0 12px 24px rgba(15, 23, 42, 0.10);
+        --shadow-xl: 0 20px 40px rgba(15, 23, 42, 0.12);
+
+        /* Border Radius */
+        --r-xs: 6px;
+        --r-sm: 10px;
+        --r-md: 16px;
+        --r-lg: 24px;
+        --r-xl: 32px;
+        --r-pill: 999px;
+
+        /* Transitions */
+        --transition-fast: 0.2s ease;
+        --transition-normal: 0.3s ease;
+        --transition-slow: 0.4s ease;
+
+        /* Layout */
+        --sidebar-width: 280px;
+        --header-height: 70px;
+
+        /* Status Colors */
+        --success: #10B981;
+        --success-bg: #ECFDF5;
+
+        --warning: #F59E0B;
+        --warning-bg: #FFFBEB;
+
+        --danger: #EF4444;
+        --danger-bg: #FEF2F2;
+
+        --info: #3B82F6;
+        --info-bg: #EFF6FF;
+}
+
+html {
+        scroll-behavior: smooth;
+}
+
+body {
+        font-family: 'Sora', sans-serif;
+        background: var(--bg);
+        color: var(--text-dark);
+        overflow-x: hidden;
+}

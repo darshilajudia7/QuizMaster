@@ -1,0 +1,162 @@
+@import url('../theme.css');
+
+/* Header */
+.dashboard-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--text-dark);
+}
+
+.dashboard-subtitle {
+    color: var(--text-light);
+    font-size: 0.95rem;
+}
+
+/* Quiz Button  */
+.btn-create-quiz {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    padding: .75rem 1.25rem;
+    font-weight: 600;
+    border-radius: .75rem;
+}
+
+.stat-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+.stat-label {
+    text-transform: uppercase;
+    letter-spacing: .05em;
+    font-size: .75rem;
+    font-weight: 600;
+    color: var(--text-light);
+}
+
+.stat-number {
+    margin-top: .25rem;
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--text-dark);
+}
+
+.stat-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: .75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+}
+
+.bg-indigo-pale {
+    background: #e0e7ff;
+    color: #4f46e5;
+}
+
+.bg-amber-pale {
+    background: #fef3c7;
+    color: #d97706;
+}
+
+/* Table  */
+.custom-table thead th {
+    background: #f8fafc;
+    color: var(--text-light);
+    font-size: .75rem;
+    text-transform: uppercase;
+    letter-spacing: .05em;
+    font-weight: 700;
+    padding: 1rem 1.25rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.custom-table td {
+    padding: 1.25rem;
+    border-color: var(--border);
+}
+
+.quiz-name {
+    font-weight: 700;
+    color: var(--text-dark);
+}
+
+.quiz-meta {
+    color: var(--text-light);
+}
+
+/* subject badge */
+.subject-badge {
+    padding: .4rem .8rem;
+    border-radius: 999px;
+    font-size: .85rem;
+    font-weight: 600;
+}
+
+.status-badge {
+    display: inline-flex;
+    padding: 0.35rem 0.75rem;
+    border-radius: var(--r-pill);
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.status-active {
+    background-color: var(--success-bg);
+    color: var(--success);
+}
+
+.status-upcoming {
+    background-color: var(--warning-bg);
+    color: var(--warning);
+}
+
+.status-closed {
+    background-color: var(--danger-bg);
+    color: var(--danger);
+}
+
+/* status badge */
+.status-badge {
+    padding: .4rem .8rem;
+    border-radius: 999px;
+    font-size: .8rem;
+    font-weight: 600;
+}
+
+.status-active {
+    background: #dcfce7;
+    color: #15803d;
+}
+
+.status-published {
+    background: #e0e7ff;
+    color: #4338ca;
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+
+    .dashboard-title {
+        font-size: 1.6rem;
+    }
+
+    .stat-number {
+        font-size: 1.5rem;
+    }
+
+    .custom-table td,
+    .custom-table th {
+        white-space: nowrap;
+    }
+}

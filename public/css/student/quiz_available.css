@@ -1,0 +1,134 @@
+@import url('../theme.css');
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg);
+    color: var(--text-dark);
+}
+
+/* Custom Quiz Card Styles */
+.quiz-card {
+    background-color: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--r-md);
+    padding: 1.5rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+    box-shadow: var(--shadow-sm);
+}
+
+.quiz-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--indigo-light);
+}
+
+/* Border Left Accent indicator */
+.metric-stack {
+    border-left: 2px solid var(--indigo-soft);
+    padding-left: 0.75rem;
+}
+
+/* Custom Input Groups */
+.custom-input-group {
+    background-color: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--r-sm);
+    display: flex;
+    align-items: center;
+    padding: 0 1rem;
+    transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.custom-input-group:focus-within {
+    border-color: var(--indigo);
+    box-shadow: 0 0 0 0.25rem rgba(79, 70, 229, 0.15);
+}
+
+.custom-control {
+    border: none;
+    background: transparent;
+    box-shadow: none !important;
+    padding: 0.6rem 0.5rem;
+    color: var(--text-mid);
+}
+
+.form-select.custom-control {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.btn-primary-custom {
+    background: var(--gradient-primary);
+    color: var(--white);
+    border: none;
+    border-radius: var(--r-sm);
+    box-shadow: var(--shadow-sm);
+    transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.btn-primary-custom:hover {
+    background: var(--gradient-primary-hover);
+    color: var(--white);
+    transform: scale(1.02);
+    box-shadow: var(--shadow-md);
+}
+
+.btn-primary-custom:active {
+    transform: scale(0.98);
+}
+
+/* Cateogoary  */
+
+.subject-txt {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.45rem 0.85rem;
+    border-radius: 999px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.2px;
+}
+
+.badge-mathematics {
+    background: #EEF2FF;
+    color: #4338CA;
+}
+
+.badge-science {
+    background: #ECFDF5;
+    color: #047857;
+}
+
+.badge-history {
+    background: #FEF3C7;
+    color: #B45309;
+}
+
+.badge-gk {
+    background: #F3E8FF;
+    color: #7E22CE;
+}
+
+.badge-programming {
+    background: #E0F2FE;
+    color: #0369A1;
+}
+
+.badge-default {
+    background: #F3F4F6;
+    color: #4B5563;
+}
+
+.badge-math {
+    background-color: var(--indigo-pale);
+    color: var(--indigo);
+}
+
+.badge-bio {
+    background-color: var(--mint-pale);
+    color: var(--mint);
+}

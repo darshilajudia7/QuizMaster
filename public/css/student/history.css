@@ -1,0 +1,270 @@
+@import url('../theme.css');
+
+/* Global Context Helpers */
+.text-dark-custom {
+    color: var(--text-dark);
+}
+
+.text-light-custom {
+    color: var(--text-light);
+}
+
+.text-mid-custom {
+    color: var(--text-mid);
+}
+
+.text-max-w {
+    max-width: 600px;
+}
+
+.label-spacing {
+    font-size: 11px;
+    letter-spacing: 0.5px;
+}
+
+.min-w-select {
+    min-width: 240px;
+}
+
+/* Dashboard Static Metrics Theme Styling Mapping */
+.stat-indigo {
+    color: var(--text-dark);
+}
+
+.icon-stat-indigo {
+    background-color: var(--indigo-pale);
+    color: var(--indigo);
+}
+
+.stat-blue {
+    color: #3B82F6;
+}
+
+.icon-stat-blue {
+    background-color: #EFF6FF;
+    color: #3B82F6;
+}
+
+.stat-mint {
+    color: var(--mint);
+}
+
+.icon-stat-mint {
+    background-color: var(--mint-pale);
+    color: var(--mint);
+}
+
+.stat-red {
+    color: #EF4444;
+}
+
+.icon-stat-red {
+    background-color: #FEF2F2;
+    color: #EF4444;
+}
+
+/* Metric Summary Blocks Framework Layout */
+.stat-card {
+    background-color: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--r-md);
+    padding: 1.25rem;
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.stat-icon {
+    width: 46px;
+    height: 46px;
+    border-radius: var(--r-sm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Control Filtering Inputs Section */
+.filter-bar {
+    background-color: var(--surface-light);
+    border-color: var(--border);
+}
+
+.custom-input-group {
+    background-color: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--r-sm);
+    display: flex;
+    align-items: center;
+    padding: 0 1rem;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.custom-input-group:focus-within {
+    border-color: var(--indigo);
+    box-shadow: 0 0 0 0.25rem rgba(79, 70, 229, 0.15);
+}
+
+.custom-control {
+    border: none;
+    background: transparent;
+    box-shadow: none !important;
+    padding: 0.6rem 0.5rem;
+    color: var(--text-mid);
+}
+
+.form-select.custom-control {
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+/* Result Cards Framework Components & State Rules Layout */
+.result-report-card {
+    background-color: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--r-md);
+    padding: 1.5rem;
+    box-shadow: var(--shadow-sm);
+    height: 100%;
+    opacity: 0;
+    transform: translateY(16px);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease, opacity 0.5s ease-out;
+}
+
+.result-report-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+}
+
+.progress-container {
+    height: 6px;
+    background-color: var(--surface-light);
+    border-radius: 999px;
+}
+
+.custom-bar {
+    border-radius: 999px;
+}
+
+.sub-footer {
+    border-color: var(--border-light) !important;
+}
+
+.sub-label {
+    font-size: 10px;
+    color: var(--text-muted);
+}
+
+/* Structural Theme Component Variations */
+.theme-high .score-badge {
+    color: var(--mint, #047857);
+    background-color: var(--mint-pale, #ECFDF5);
+    padding: 2px 8px;
+    border-radius: 999px;
+    font-size: 12px;
+}
+
+.theme-high .custom-bar {
+    background-color: var(--mint, #047857);
+}
+
+.theme-high .metric-accent-indicator {
+    border-left: 3px solid var(--mint, #047857);
+    padding-left: 0.85rem;
+}
+
+.theme-high:hover {
+    border-color: var(--mint, #047857);
+}
+
+.theme-low .score-badge {
+    color: #EF4444;
+    background-color: #FEF2F2;
+    padding: 2px 8px;
+    border-radius: 999px;
+    font-size: 12px;
+}
+
+.theme-low .custom-bar {
+    background-color: #EF4444;
+}
+
+.theme-low .metric-accent-indicator {
+    border-left: 3px solid #EF4444;
+    padding-left: 0.85rem;
+}
+
+.theme-low:hover {
+    border-color: #EF4444;
+}
+
+.theme-normal .score-badge {
+    color: var(--indigo);
+    background-color: var(--indigo-pale);
+    padding: 2px 8px;
+    border-radius: 999px;
+    font-size: 12px;
+}
+
+.theme-normal .custom-bar {
+    background-color: var(--indigo);
+}
+
+.theme-normal .metric-accent-indicator {
+    border-left: 3px solid var(--indigo-light);
+    padding-left: 0.85rem;
+}
+
+.theme-normal:hover {
+    border-color: var(--indigo-light);
+}
+
+/* Global Subject Categorization Badges Layout styling rules */
+.subject-txt {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.45rem 0.85rem;
+    border-radius: 999px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.2px;
+}
+
+.badge-mathematics {
+    background: #EEF2FF;
+    color: #4338CA;
+}
+
+.badge-science {
+    background: #ECFDF5;
+    color: #047857;
+}
+
+.badge-history {
+    background: #FEF3C7;
+    color: #B45309;
+}
+
+.badge-gk {
+    background: #F3E8FF;
+    color: #7E22CE;
+}
+
+.badge-programming {
+    background: #E0F2FE;
+    color: #0369A1;
+}
+
+.badge-default {
+    background: #F3F4F6;
+    color: #4B5563;
+}
+
+/* Sticky Global Page Footer UI Layout rules */
+.footer-container {
+    background-color: var(--surface);
+    border-color: var(--border) !important;
+}
