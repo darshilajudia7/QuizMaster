@@ -3,16 +3,13 @@
 namespace App\Http\Controllers\Teacher;
 
 use App\Http\Controllers\Controller;
-
-use Illuminate\Http\Request;
-use App\Models\quiz_questions;
 use App\Models\quiz_options;
-
-use Illuminate\Support\Facades\Session;
-
-use Illuminate\Support\Facades\DB;
+use App\Models\quiz_questions;
 use Carbon\Carbon;
 use Exception;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Session;
 
 class QuizController extends Controller
 {
@@ -55,17 +52,17 @@ class QuizController extends Controller
         $query = quiz_questions::where('teacher_id', $teacherId);
 
         // Search Filter
-        if (!empty($search)) {
-            $query->where('title', 'LIKE', '%' . $search . '%');
+        if (! empty($search)) {
+            $query->where('title', 'LIKE', '%'.$search.'%');
         }
 
         // Category Filter
-        if ($categoryFilter !== 'all' && !empty($categoryFilter)) {
+        if ($categoryFilter !== 'all' && ! empty($categoryFilter)) {
             $query->where('category', $categoryFilter);
         }
 
         // paginated results
-        $quizzes = $query->orderBy('created_at', 'desc')->paginate(2)->withQueryString();
+        $quizzes = $query->orderBy('created_at', 'desc')->paginate(10)->withQueryString();
 
         // Categories
         $categories = ['Mathematics', 'Science', 'History', 'General Knowledge', 'Programming'];
@@ -85,7 +82,7 @@ class QuizController extends Controller
     // Insert Functions
     public function insert(Request $request)
     {
-        // Session ID 
+        // Session ID
         $request->merge(['teacher_id' => Session::get('user_id')]);
 
         // Validation
@@ -134,12 +131,14 @@ class QuizController extends Controller
             }
 
             DB::commit();
+
             return redirect()->back()->with('success', 'Quiz saved successfully!');
         } catch (Exception $e) {
             DB::rollBack();
+
             return redirect()->back()
                 ->withInput()
-                ->with('error', 'Database operation aborted: ' . $e->getMessage());
+                ->with('error', 'Database operation aborted: '.$e->getMessage());
         }
     }
 
@@ -150,7 +149,7 @@ class QuizController extends Controller
         $quiz = DB::table('quiz_questions')->where('id', $id)->where('teacher_id', Session::get('user_id'))->first();
 
         // Check Quiz Is Exists
-        if (!$quiz) {
+        if (! $quiz) {
             return response()->json(['success' => false, 'message' => 'Quiz not found or unauthorized.'], 404);
         }
 
@@ -201,7 +200,7 @@ class QuizController extends Controller
             DB::table('quiz_options')->where('quiz_id', $id)->delete();
 
             // Update Query In quiz_options
-            if (!empty($request->questions)) {
+            if (! empty($request->questions)) {
                 foreach ($request->questions as $q) {
                     DB::table('quiz_options')->insert([
                         'quiz_id' => $id,
@@ -218,12 +217,14 @@ class QuizController extends Controller
             }
 
             DB::commit();
+
             return redirect()->back()->with('success', 'Quiz updated successfully!');
-        } catch (\Exception $e) {
+        } catch (Exception $e) {
             DB::rollBack();
+
             return redirect()->back()
                 ->withInput()
-                ->with('error', 'Database update rollback triggered: ' . $e->getMessage());
+                ->with('error', 'Database update rollback triggered: '.$e->getMessage());
         }
     }
 
@@ -240,8 +241,8 @@ class QuizController extends Controller
             }
 
             return response()->json(['success' => false, 'message' => 'Quiz target row not found or unauthorized.'], 404);
-        } catch (\Exception $e) {
-            return response()->json(['success' => false, 'message' => 'System failure: ' . $e->getMessage()], 500);
+        } catch (Exception $e) {
+            return response()->json(['success' => false, 'message' => 'System failure: '.$e->getMessage()], 500);
         }
     }
 }
